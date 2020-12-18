@@ -8,8 +8,8 @@ all:
 	$(MAKE) -C gtest
 #RO	$(MAKE) -C zufallstest
 #RO	$(MAKE) -C syntax/datum
-#RO	$(MAKE) -C syntax/iban/ibanpruefung
-#RO	$(MAKE) -C syntax/iban
+	$(MAKE) -C syntax/iban/ibanpruefung
+	$(MAKE) -C syntax/iban
 #RO	$(MAKE) -C ctc/max3
 #RO	$(MAKE) -C ctc/undoder
 #RO	$(MAKE) -C bubblesort/istaufsteigendsortiert

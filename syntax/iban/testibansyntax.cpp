@@ -24,3 +24,7 @@ TEST(IBAN_Syntax, TF5_Ziffer_zu_wenig) {
 TEST(IBAN_Syntax, TF6_enthaelt_Buchstabe) {
   EXPECT_FALSE(istIBANsyntaxGueltig("DE10 192345678  01A3456789"));
 }
+
+TEST(IBAN_Syntax, TF7_Tabs) {
+  EXPECT_TRUE(istIBANsyntaxGueltig("DE10\t1923\t45678\t0133\t4567\t89"));
+}
