@@ -55,3 +55,6 @@ TEST(Taxifahrt, TF12) {
 }
 
 
+TEST(Taxifahrt, TF9Bad) {
+  EXPECT_EQ(1890, fahrpreis(grundpreis, centProKm, 5, false, true));
+}

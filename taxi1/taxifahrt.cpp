@@ -9,7 +9,7 @@ int fahrpreis(int grundpreis,                  // Eurocent
   double preis = grundpreis + centProKm * streckeInKm;
   if(streckeInKm > 50) {
     preis *= 0.9;                              // Rabatt 10\%
-  } else if(streckeInKm > 10) {
+  } else if(streckeInKm <= 50) {  // Tests where streckeInKm <= 10 now fail
     preis *= 0.95;                             // Rabatt 5\%
   }
   if(nachtfahrt) {
