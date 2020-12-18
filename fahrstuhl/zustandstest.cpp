@@ -75,4 +75,19 @@ TEST(Zustand, TF13_Uebergangsbaum) {
   EXPECT_EQ( run(fst, "beb"), "MS MA TSMS");
 }
 
+// transition tree
+// we already test 'sts' which includes this 'st', so this is, like stated in the 
+// book, (usually) not necessary
+TEST(Zustand, TF14_Uebergangsbaum) {
+  Fahrstuhlsteuerung fst;
+  EXPECT_EQ( run(fst, "st"), "TO TS");
+}
 
+// 2 switch coverage
+// b results in MS (elevator moves)
+// e > MA (open door)
+// t > TS (close door)
+TEST(Zustand, TF15_Uebergangsbaum) {
+  Fahrstuhlsteuerung fst;
+  EXPECT_EQ( run(fst, "bet"), "MS MA TS");
+}
