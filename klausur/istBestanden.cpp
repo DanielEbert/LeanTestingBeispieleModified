@@ -11,5 +11,5 @@ bool istBestanden(int punkte) {
     throw std::invalid_argument("zu hohe Punktzahl: "
                             + std::to_string(punkte));
   }
-  return punkte >= 50;
+  return punkte > 50;
 }

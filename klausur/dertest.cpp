@@ -81,3 +81,10 @@ TEST(istBestandenTest, 8_MIN_INT_Punktzahl) {
   ASSERT_THROW(istBestanden(punkte), std::invalid_argument);
 }
 
+TEST(istBestandenTest, 9_kleine_Punktzahl) {
+  EXPECT_FALSE(istBestanden(49));
+}
+
+TEST(istBestandenTest, 10_ausreichende_Punktzahl) {
+  EXPECT_TRUE(istBestanden(50));
+}
