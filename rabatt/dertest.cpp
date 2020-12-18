@@ -43,3 +43,18 @@ TEST(RabattTest, uAeK22_UhrzeitZufrueh) {
 TEST(RabattTest, uAeK23_UhrzeitZugross) {
    ASSERT_THROW(rabatt(50000, 24, 0), std::invalid_argument);
 }
+
+
+// 0.40 Euro > 0.02 Euro discount
+TEST(RabattTest, gAeK33_Morgens_0_B_150) {
+   EXPECT_EQ(rabatt(40, 8, 8), 2);
+}
+
+// 186.32 Euro > 10 Euro discount
+TEST(RabattTest, gAeK34_Morgens_150_B_200) {
+   EXPECT_EQ(rabatt(18632, 9, 30), 1000);
+}
+
+TEST(RabattTest, uAeK13_zuhoherBetrag) {
+   ASSERT_THROW(rabatt(10000321, 12, 0), std::invalid_argument);
+}

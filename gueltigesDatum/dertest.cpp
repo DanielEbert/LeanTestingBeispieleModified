@@ -64,4 +64,6 @@ TEST(istGueltigesDatumTest, uAeK10_29_Jahr100) {
 }
 
 
-
+TEST(istGueltigesDatumTest, gAeK2_normal) {
+  EXPECT_TRUE(istGueltigesDatum(25, 5, 2011));
+}
