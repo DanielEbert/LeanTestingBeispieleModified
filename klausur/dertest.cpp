@@ -29,6 +29,14 @@ TEST(istBestandenTest, 4_ausreichende_Punktzahl) {
   EXPECT_TRUE(istBestanden(88));
 }
 
+TEST(istBestandenTest, 5_kleine_Punktzahl) {
+  EXPECT_FALSE(istBestanden(33));
+}
+
+TEST(istBestandenTest, 6_ausreichende_Punktzahl) {
+  EXPECT_TRUE(istBestanden(77));
+}
+
 TEST(istBestandenTest, 5_MAX_INT_Punktzahl) {
   static_assert(sizeof(long) > sizeof(int), "long hat zu wenige Bits!");
   long punkte = 55L + std::numeric_limits<int>::max(); 
