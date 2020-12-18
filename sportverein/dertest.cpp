@@ -48,4 +48,9 @@ TEST(monatsbeitragTest, TF8_AktivOhneAbteilung) {
   ASSERT_THROW(mb.beitrag("Erwachsener"), std::logic_error);
 }
 
-
+// current tests are good already, but lets test combination of two 'abt' once
+TEST(monatsbeitragTest, TF9) {
+  Monatsbeitrag mb;
+  std::set<std::string> abt {"Turnen", "Tischtennis"};
+  EXPECT_EQ(mb.beitrag("Erwachsener", abt), 34);
+}
