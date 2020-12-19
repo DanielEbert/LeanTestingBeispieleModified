@@ -6,7 +6,7 @@ all:
 #RO	$(MAKE) -C statistikDB
 	$(MAKE) -C rabatt
 	$(MAKE) -C gtest
-#RO	$(MAKE) -C zufallstest
+	$(MAKE) -C zufallstest
 #RO	$(MAKE) -C syntax/datum
 	$(MAKE) -C syntax/iban/ibanpruefung
 	$(MAKE) -C syntax/iban
@@ -31,10 +31,10 @@ clean:
 #RO	$(MAKE) -C statistikDB clean
 	$(MAKE) -C rabatt clean
 	$(MAKE) -C gtest clean
-#RO	$(MAKE) -C zufallstest clean
+	$(MAKE) -C zufallstest clean
 #RO	$(MAKE) -C syntax/datum clean
-#RO	$(MAKE) -C syntax/iban/ibanpruefung clean
-#RO	$(MAKE) -C syntax/iban clean
+	$(MAKE) -C syntax/iban/ibanpruefung clean
+	$(MAKE) -C syntax/iban clean
 #RO	$(MAKE) -C ctc/max3 clean
 #RO	$(MAKE) -C ctc/undoder clean
 #RO	$(MAKE) -C bubblesort/istaufsteigendsortiert clean
